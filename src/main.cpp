@@ -563,6 +563,7 @@ int main() {
 				current_v += v_incr;
 				current_s += current_v * PATH_DT;
 				interpolated_s_traj.push_back(current_s);
+				}
 
 
 			interpolated_x_traj = interpolate_points(coarse_s_traj, coarse_x_traj, interpolated_s_traj);
@@ -589,7 +590,7 @@ int main() {
           	//this_thread::sleep_for(chrono::milliseconds(1000));
           	ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
           
-        }
+        	}
       } else {
         // Manual driving
         std::string msg = "42[\"manual\",{}]";
@@ -630,4 +631,4 @@ int main() {
     return -1;
   }
   h.run();
-}
+  	}
