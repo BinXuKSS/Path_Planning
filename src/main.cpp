@@ -511,11 +511,11 @@ int main() {
 			// first two points of coarse trajectory, to ensure spline begins smoothly
 			if (pre_closepath_size >= 2) {
 				coarse_s_traj.push_back(prev_s);
-				coarse_x_traj.push_back(previous_path_x[subpath_size-2]);
-				coarse_y_traj.push_back(previous_path_y[subpath_size-2]);
+				coarse_x_traj.push_back(previous_path_x[pre_closepath_size-2]);
+				coarse_y_traj.push_back(previous_path_y[pre_closepath_size-2]);
 				coarse_s_traj.push_back(pos_s);
-				coarse_x_traj.push_back(previous_path_x[subpath_size-1]);
-				coarse_y_traj.push_back(previous_path_y[subpath_size-1]);
+				coarse_x_traj.push_back(previous_path_x[pre_closepath_size-1]);
+				coarse_y_traj.push_back(previous_path_y[pre_closepath_size-1]);
 				} else {
 						double prev_s = pos_s - 1;
 						double prev_x = pos_x - cos(angle);
